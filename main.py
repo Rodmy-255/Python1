@@ -31,7 +31,6 @@ def main():
             # Llamada a la Funcion de lectura de registros de la BD.
             dataFrame = db.read_table_with_headers('respuestas', Atributos)
             
-            """
             # ESCALAMIENTO
             #================================== ANTES DEL ESCALAMIENTO
             #HISTOGRAMAS UNIVARIABLE
@@ -101,7 +100,6 @@ def main():
             sns2.histplot(rescaledX[:,21:22], ax=ax[3, 2], kde=True, stat="density")
             ptl2.show()
 
-            """
             # Mostrar las primeras filas del DataFrame
             print(dataFrame.head())
             print(f'Cantidad de filas y Columnas: {dataFrame.shape}')
@@ -178,7 +176,6 @@ def main():
 
     else:
         print("No se pudo conectar a la base de datos")
-
 
 if __name__ == "__main__":
     main()
