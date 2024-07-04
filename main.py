@@ -3,6 +3,7 @@
 import pandas as pd
 import numpy as np
 from db_connection import MySQLDatabase
+import config
 
 # LIBRERIAS DE PRE PROCESAMIENTO, PROCESAMIENTO
 from sklearn.model_selection import train_test_split
@@ -13,10 +14,10 @@ def main():
 
     # Configuración de la conexión
     db = MySQLDatabase(
-        host="154.12.254.242",
-        user="ratiosof74bo_beck_user",
-        password="pkFhm7*21XI2",
-        database="ratiosof74bo_beck_bd"
+        host=config.host,
+        user=config.user,
+        password=config.password,
+        database=config.database
     )
 
     # Definicion de Cabeceras
